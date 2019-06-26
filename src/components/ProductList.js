@@ -4,11 +4,18 @@ import Product from './Product'
 
 
 class ProductList extends React.Component {
+
+  state={
+    products:[]
+  }
   render(){
     return(
-      <div>
-        <Product/>
-      </div>
+      <React.Fragment>
+        <div className="py-5">
+          
+        </div>
+      </React.Fragment>
+        // <Product/>
     )
   }
 }
