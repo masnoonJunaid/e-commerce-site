@@ -14,8 +14,9 @@ class Product extends React.Component {
             {value => (
               <div
                 className="img-container p-5"
-                 onClick={()=>
+                 onClick={()=>{
                    value.handleDetail(id)
+                 }
                }>
                 <Link to="/details">
                   <img
@@ -110,7 +111,7 @@ const ProductWrapper = styled.div`
     bottom:0;
     right:0;
     padding:0.2rem 0.4rem;
-    background:var(--lightBlue);
+    background:#0000FF;
     border: none;
     color:var(--mainWhite);
     font-size:1.4rem;
