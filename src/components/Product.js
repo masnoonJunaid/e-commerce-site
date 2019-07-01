@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -16,7 +16,7 @@ class Product extends React.Component {
                 className="img-container p-5"
                  onClick={()=>
                    value.handleDetail(id)
-              }>
+               }>
                 <Link to="/details">
                   <img
                     src={img}
@@ -28,11 +28,12 @@ class Product extends React.Component {
                   disabled={inCart ? true : false}
                   onClick={() => {
                     value.addToCart(id);
-                  }}>
+                    value.openModal(id);
+                  }}
+                  >
                   {inCart?
                     (<p
-                      className="text-capitalize mb-0"
-                      disabled>
+                      className="text-capitalize mb-0"disabled>
                     {" "}
                   in Cart
                 </p>
