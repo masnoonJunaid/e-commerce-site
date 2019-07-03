@@ -9,7 +9,7 @@ class Navbar extends React.Component {
     return(
       <NavWrapper className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
         <Link to="/">
-          <img src={logo} alt="store"
+          <img src={logo.svg} alt="store"
               className="navbar-brand"/>
         </Link>
         <ul className="navbar-nav align-items-cemter">
@@ -20,7 +20,7 @@ class Navbar extends React.Component {
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
+          <ButtonContainer className="cartLogo">
             <span clssName = "mr-2">
                 <i className="fas fa-cart-plus"/>
             </span>
@@ -38,6 +38,9 @@ const NavWrapper = styled.nav`
    color:var(--mainWhite)!important;
    font-size:1.3rem;
    text-transform:capitalize;
+ }
+ .cartLogo{
+   background:aliceblue
  }
 `
 
